@@ -1,0 +1,79 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "general";
+@import "blocks/blocks";
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    &__logo img{
+        width: 100%;
+    }
+
+    .nav__list{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        .nav__item:not(:last-child) {
+            margin-right: 2rem;
+
+            
+        }
+        .nav__link{
+            text-decoration: none;
+            color: $text-color;
+            font-weight: 700;
+            font-size: 14px;
+            transition: color .3s ease;
+            &:hover{
+                color: #888
+            }
+        }
+    }
+
+    &__apply{
+        @include btn-apply();
+        transition: all .5s ease;
+        border: 1px solid $apply-btn;
+        &:hover{
+            
+            background-color: #fff;
+            color: $apply-btn;
+        }
+    }
+}
+
+.hero-content{
+    background-color: $bg-color;
+    padding-top: 30px;
+
+    .row{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-content__desc-title{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
+    .hero-content__desc-text{
+        color: #fff;
+        font-size: 18px;
+        line-height: 150%;
+        margin-bottom: 50px;
+    }
+    .hero-content__desc-btn{
+        @include btn-apply();
+        
+    }
+    .hero-img{
+        width: 100%;
+    }
+}

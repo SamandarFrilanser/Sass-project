@@ -1,0 +1,15 @@
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@mixin btn-apply {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    background-color: $apply-btn;
+    border-radius: 8px;
+    text-decoration: none;
+}
